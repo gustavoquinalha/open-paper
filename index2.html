@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <style media="screen">
+    * {
+margin: 0;
+padding: 0
+}
+body, html {
+background: #ccc;
+height: 100%;
+}
+.paper-relative {
+position: relative;
+height:  300px;
+width: 500px;
+margin: 0 auto;
+padding-top: 20px;
+}
+.paper-group {
+display: flex;
+margin: 0 auto;
+position: relative;
+transition: .3s;
+}
+.paper {
+height: 200px;
+background: #fff;
+}
+
+.paper-group:hover .paper:nth-child(odd) {
+transform: skewY(-10deg);
+}
+.paper-group:hover .paper:nth-child(even) {
+transform: skewY(10deg);
+background: #f4f4f4;
+}
+
+.paper-group .paper1,
+.paper-group .paper2,
+.paper-group .paper3,
+.paper-group .paper4,
+.paper-group .paper5 {
+transition: .3s;
+position: absolute;
+right:0;
+z-index:9;
+width: 100px;
+}
+
+.paper-group:hover .paper1 {
+right: 400px;
+}
+.paper-group:hover .paper2 {
+right: 300px;
+}
+.paper-group:hover .paper3 {
+right: 200px;
+}
+.paper-group:hover .paper4 {
+right: 100px;
+}
+.paper-group:hover .paper5 {
+right: ;
+}
+.paper-group .name {
+display: none;
+}
+.paper-group:hover .name {
+display: block;
+content: attr(data-teste);
+position: absolute;
+z-index: 99999;
+font-size: 4em;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 500px;
+height: 200px;
+top: 0;
+left: 0;
+animation: name 3s;
+animation-delay: .3s;
+animation-fill-mode: backwards; /* or: backwards, both, none */
+}
+
+@keyframes name {
+from{opacity: 0}
+}
+    </style>
+    <div class="paper-relative">
+  <div class="paper-group">
+    <div class="name">
+      <div>Gustavo</div>
+    </div>
+    <div class="paper paper1"></div>
+    <div class="paper paper2"></div>
+    <div class="paper paper3"></div>
+    <div class="paper paper4"></div>
+    <div class="paper paper5"></div>
+  </div>
+</div>
+
+
+<div class="paper-relative">
+  <div class="paper-group">
+    <div class="name">
+      <div>Thiago Fernando</div>
+    </div>
+    <div class="paper paper1"></div>
+    <div class="paper paper2"></div>
+    <div class="paper paper3"></div>
+    <div class="paper paper4"></div>
+    <div class="paper paper5"></div>
+  </div>
+</div>
+
+<div class="paper-relative">
+  <div class="paper-group">
+    <div class="name">
+      <div>Joao</div>
+    </div>
+    <div class="paper paper1"></div>
+    <div class="paper paper2"></div>
+    <div class="paper paper3"></div>
+    <div class="paper paper4"></div>
+    <div class="paper paper5"></div>
+  </div>
+</div>
+
+  </body>
+</html>
